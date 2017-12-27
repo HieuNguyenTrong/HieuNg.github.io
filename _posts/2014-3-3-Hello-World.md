@@ -1,9 +1,8 @@
 ---
 layout: post
-title: You're up and running!
+title: Cons and Pros of using HDF5, LMDB
 ---
-
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+1. HDF5 is more flexible and can support labels the size of the image.
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 

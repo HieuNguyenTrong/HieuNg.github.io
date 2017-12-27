@@ -3,7 +3,7 @@ layout: post
 title: How to install Caffe library in Windows 10
 ---
 
-1. Fistly, you need to install Visual Studio 2015, Cuda 8.0 and Cudnnv5 as links below:
+1. Firstly, you need to install Visual Studio 2015, Cuda 8.0 and Cudnnv5 as links below:
 
 - Cuda 8.0
    https://developer.nvidia.com/cuda-80-ga2-download-archive

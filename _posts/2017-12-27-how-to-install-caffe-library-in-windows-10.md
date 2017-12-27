@@ -9,7 +9,7 @@ title: How to install Caffe library in Windows 10
    https://developer.nvidia.com/cuda-80-ga2-download-archive
 
 - cuDNN v5 Library for Windows 10: 
-   https://developer.nvidia.com/cuda-80-ga2-download-archive
+   https://developer.nvidia.com/rdp/cudnn-archive
    
 - For installing Visual Studio2015, you can find in some sites to download.
 

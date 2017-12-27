@@ -4,12 +4,16 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I received a bachelor’s degree in Software Engineering from Le Quy Don Technical University, Hanoi, Vietnam in 2015. 
+I worked as a mobile developer in NTT Data Company, Vietnam for one year.
+In 2016, I joined Dongguk University. 
+
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I'm is currently a Master student in Multimedia Engineering of Dongguk University. 
+During my Master study, my main research interests are Mobile Application Development, Game AI, Image Processing, Computer Vision and Machine Learning.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[hieeu.nguyentrong@gmail.com](mailto:hieeu.nguyentrong@gmail.com)

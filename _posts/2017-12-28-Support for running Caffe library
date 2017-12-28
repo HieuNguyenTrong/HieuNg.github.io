@@ -1,0 +1,2 @@
+1. To install OpenCV for Python
+$sudo apt-get install python-opencv

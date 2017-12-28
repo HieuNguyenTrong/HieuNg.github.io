@@ -7,60 +7,61 @@ title: How to configure static ip address ubuntu 16.04
     <title></title>
   </head>
   <body bgcolor=white>
- <ol>
-<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;"> Firstly, you need to know about your "interfaces" look like such as: eth0, enp2s0</span></strong></li>
+    <ol>
+<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;"> Firstly, you need to know about your "interfaces" look like such as: eth0, enp2s0</span></strong></li>
 </ol>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">&nbsp;&nbsp; To know that, type: $ ifconfig</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">&nbsp;&nbsp; Here is the result</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">&nbsp;&nbsp; &gt;&gt; enp2s0&nbsp;&nbsp;&nbsp; Link encap:Ethernet</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;To know that, type: $ ifconfig</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Here is the result</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt;&gt; enp2s0&nbsp;&nbsp;&nbsp; Link encap:Ethernet</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</span></p>
 <ol start="2">
-<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;"> Edit /etc/network/interfaces</span></strong></li>
+<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;"> Edit /etc/network/interfaces</span></strong></li>
 </ol>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ sudo nano /etc/network/interfaces</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ sudo nano /etc/network/interfaces</span></p>
 <ol start="3">
-<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;"> A screen is displayed</span></strong></li>
+<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;"> A screen is displayed</span></strong></li>
 </ol>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">--------------------------------------------------------------</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;"># interfaces(5) file used by ifup(8) and ifdown(8)</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">auto lo</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">iface lo inet loopback</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">--------------------------------------------------------------</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------------------------------------------------------------</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # interfaces(5) file used by ifup(8) and ifdown(8)</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; auto lo</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iface lo inet loopback</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------------------------------------------------------------</span></p>
 <ol start="4">
-<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;"> Modify like as follows:</span></strong></li>
+<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;"> Modify like as follows:</span></strong></li>
 </ol>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">--------------------------------------------------------------</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;"># interfaces(5) file used by ifup(8) and ifdown(8)</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">auto lo</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">iface lo inet loopback</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">auto enp2s0</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">iface enp2s0 inet static</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address x.x.x.x # your_ip_address</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; netmask 255.255.255.0 # netmask</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; broadcast x.x.x.x # your_broadcasr</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gateway x.x.x.x #your_gate_way</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dns-nameservers 8.8.8.8 8.8.4.4 </span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dns-search lan</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">-------------------------------------------------------------</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">#Save and exit</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------------------------------------------------------------</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # interfaces(5) file used by ifup(8) and ifdown(8)</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; auto lo</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iface lo inet loopback</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; auto enp2s0</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iface enp2s0 inet static</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; address x.x.x.x # your_ip_address</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; netmask 255.255.255.0 # netmask</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; broadcast x.x.x.x # your_broadcasr</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; gateway x.x.x.x #your_gate_way</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dns-nameservers 8.8.8.8 8.8.4.4 </span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dns-search lan</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -------------------------------------------------------------</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #Save and exit</span></p>
 <ol start="5">
-<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;"> Implement the same way with another syntax:</span></strong></li>
+<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;"> Implement the same way with another syntax:</span></strong></li>
 </ol>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">$ sudo nano /etc/resolv.conf</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">Just add lines as below:</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">------------------------------------------------------------</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">nameserver 8.8.8.8</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">nameserver 8.8.4.4</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">search lan</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">------------------------------------------------------------</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">#Save and exit</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $ sudo nano /etc/resolv.conf</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Just add lines as below:</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------------------------------------------------------------</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nameserver 8.8.8.8</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nameserver 8.8.4.4</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; search lan</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;------------------------------------------------------------</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;#Save and exit</span></p>
 <ol start="6">
-<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;"> Restart the networking service </span></strong></li>
+<li><strong><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;"> Restart the networking service </span></strong></li>
 </ol>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">$ sudo /etc/init.d/networking restart</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">After doing that, if you don't get any errors, your network now be configured with the static IP address.</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">Finally, perform a reset by:</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">$ sudo reboot</span></p>
-<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif;">That's it.</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $ sudo /etc/init.d/networking restart</span></p>
+<p style="text-indent: 6.0pt;"><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; After doing that, if you don't get any errors, your network now be configured with the static IP &nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="text-indent: 6.0pt;"><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; address.</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Finally, perform a reset by:</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $ sudo reboot</span></p>
+<p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Garamond',serif;">&nbsp; That's it.&nbsp;</span></p>
   </body>
 </html>

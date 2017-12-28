@@ -1,4 +1,3 @@
-
 1. Firstly, you need to know about your "interfaces" look like such as: eth0, enp2s0
    To know that, type: $ ifconfig
    Here is the result

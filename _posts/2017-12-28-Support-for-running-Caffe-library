@@ -1,2 +1,7 @@
+---
+layout: post
+title: Support for running Caffe library
+---
+
 1. To install OpenCV for Python
 $sudo apt-get install python-opencv

@@ -3,48 +3,8 @@
     <title>How to configure static ip address ubuntu 16.04</title>
   </head>
   <body bgcolor=white>
-    <h1>1. Firstly, you need to know about your "interfaces" look like such as: eth0, enp2s0</h1>
-    <p>To know that, type: $ ifconfig</p>
-    <p>Here is the result</p>
-    <p> >> enp2s0    Link encap:Ethernet</p>
-    <p> ...</p>
-     <h1>2. Edit /etc/network/interfaces</h1>
-    <p> $ sudo nano /etc/network/interfaces</p>
-     <h1>3. A screen is displayed</h1>
-    <p>--------------------------------------------------------------</p>
-    <p># interfaces(5) file used by ifup(8) and ifdown(8)</p>
-    <p>auto lo</p>
-    <p>iface lo inet loopback</p>
-    <p>--------------------------------------------------------------</p>
-     <h1>4. Modify like as follows:</h1>
-    <p>--------------------------------------------------------------</p>
-    <p># interfaces(5) file used by ifup(8) and ifdown(8)</p>
-    <p>auto lo</p>
-    <p>iface lo inet loopback</p>
-    <p>auto enp2s0</p>
-    <p>iface enp2s0 inet static</p>
-    <p>         address x.x.x.x # your_ip_address</p>
-    <p>         netmask 255.255.255.0 # netmask</p>
-    <p>         broadcast x.x.x.x # your_broadcasr</p>
-    <p>         gateway x.x.x.x #your_gate_way</p>
-    <p>         dns-nameservers 8.8.8.8 8.8.4.4 </p>
-    <p>         dns-search lan</p>
-    <p-------------------------------------------------------------</p>
-    <p>#Save and exit</p>
-     <h1>5. Implement the same way with another syntax:</h1>
-    <p>$  sudo nano /etc/resolv.conf</p>
-    <p>Just add lines as below:</p>
-    <p>------------------------------------------------------------</p>
-    <p>nameserver 8.8.8.8</p>
-    <p>nameserver 8.8.4.4</p>
-    <p>search lan</p>
-    <p>------------------------------------------------------------</p>
-    <p>#Save and exit</p>
-      <h1>6. Restart the networking service</h1>
-    <p>$ sudo /etc/init.d/networking restart</p>
-    <p>After doing that, if you don't get any errors, your network now be configured with the static IP address.</p>
-    <p>Finally, perform a reset by:</p>
-    <p>$ sudo reboot</p>
-    <p>That's it.</p>
+   <p>1. Firstly, you need to know about your "interfaces" look like such as: eth0, enp2s0<br /> To know that, type: $ ifconfig<br /> Here is the result<br /> &gt;&gt; enp2s0 Link encap:Ethernet<br /> ...<br />2. Edit /etc/network/interfaces<br /> $ sudo nano /etc/network/interfaces<br />3. A screen is displayed<br />--------------------------------------------------------------<br /># interfaces(5) file used by ifup(8) and ifdown(8)<br />auto lo<br />iface lo inet loopback<br />--------------------------------------------------------------<br />4. Modify like as follows:<br />--------------------------------------------------------------<br /># interfaces(5) file used by ifup(8) and ifdown(8)<br />auto lo<br />iface lo inet loopback<br />auto enp2s0<br />iface enp2s0 inet static<br /> address x.x.x.x # your_ip_address<br /> netmask 255.255.255.0 # netmask<br /> broadcast x.x.x.x # your_broadcasr<br /> gateway x.x.x.x #your_gate_way<br /> dns-nameservers 8.8.8.8 8.8.4.4 <br /> dns-search lan<br />-------------------------------------------------------------<br />#Save and exit<br />5. Implement the same way with another syntax:<br />$ sudo nano /etc/resolv.conf<br />Just add lines as below:<br />------------------------------------------------------------<br />nameserver 8.8.8.8<br />nameserver 8.8.4.4<br />search lan<br />------------------------------------------------------------<br />#Save and exit</p>
+<p>6. Restart the networking service <br />$ sudo /etc/init.d/networking restart<br />After doing that, if you don't get any errors, your network now be configured with the static IP address.<br />Finally, perform a reset by:<br />$ sudo reboot</p>
+<p>That's it.</p>
   </body>
 </html>

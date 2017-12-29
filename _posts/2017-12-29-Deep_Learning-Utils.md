@@ -10,8 +10,12 @@ title: Deep Learning Utils
 
 - W1 = S * (W0−1)+ F−2∗P
 
-##### where:
+####Where:
 
-  W0 is the input size, W1 is the output size, F is the receptive field (filter width), P is the padding (default: 0), S is the stride (default: 1)
+ 1. W0 is the input size,
+ 2. W1 is the output size, 
+ 3. F is the receptive field (filter width), 
+ 4. P is the padding (default: 0), 
+ 5. S is the stride (default: 1)
   
-##### It is just the ‘opposite’ operation of the convolution (basically exchange the forward and backward pass).
+#### It is just the ‘opposite’ operation of the convolution (basically exchange the forward and backward pass).

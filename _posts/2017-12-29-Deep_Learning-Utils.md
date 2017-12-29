@@ -10,7 +10,7 @@ title: Deep Learning Utils
 
 - W1 = S * (W0−1)+ F−2∗P
 
-####Where:
+#### Where:
 
  1. W0 is the input size,
  2. W1 is the output size, 

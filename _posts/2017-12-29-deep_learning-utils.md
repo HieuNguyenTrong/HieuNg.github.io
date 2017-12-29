@@ -3,9 +3,9 @@ layout: post
 title: Deep Learning Utils
 ---
 ### How to calculate the output of a convolution layer as follows:
-
+                  
                     W1 = (W0 − F + 2P)/S + 1
-                    
+             
 ### How to calculate the output of a deconvolution layer as follows:
 
                     W1 = S * (W0 − 1) + F − 2∗P

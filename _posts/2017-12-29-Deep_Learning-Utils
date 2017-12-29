@@ -1,9 +1,0 @@
----
-layout: post
-title: Deep Learning Utils
----
->  How to calculate the output of a convolution layer as follows:
-- W=(W−F+2P)/S+1 where 
-✓ f is the receptive field (filter width)
-✓ p is the padding (default: 0)
-✓ s is the stride (default: 1)

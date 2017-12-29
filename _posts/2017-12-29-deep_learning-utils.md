@@ -17,5 +17,5 @@ title: Deep Learning Utils
                  3. F is the receptive field (kernel-size), 
                  4. P is the padding (default: 0), 
                  5. S is the stride (default: 1)
-
+                 
 #### It is just the ‘opposite’ operation of the convolution (basically exchange the forward and backward pass).

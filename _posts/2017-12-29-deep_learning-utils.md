@@ -14,7 +14,7 @@ title: Deep Learning Utils
 
                  1. W0 is the input size,
                  2. W1 is the output size, 
-                 3. F is the receptive field (filter width), 
+                 3. F is the receptive field (kernel-size), 
                  4. P is the padding (default: 0), 
                  5. S is the stride (default: 1)
 

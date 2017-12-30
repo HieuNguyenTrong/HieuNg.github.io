@@ -26,5 +26,13 @@ title: Deep Learning Utils
     + P = ( F - 1 ) /2
     
 - The depth of the output size: it corresponds to the number of filters   
+
 Note: 
+
  + In Caffe library, a batch size of the network which corresponds to the number of filtets. Therefore, choosing a good batch size for training is essential due to the power of GPUs. We will meet a error such as: "out of memory". 
+ 
+ + After experience with Caffe library for training the net, i found out that, to reduce the training time and increase the accuracy of the model, the batch size shoud be increased, however, increasing the batch size depends on the power of GPUs, due to increasing parameters of the net. 
+ 
+ + Besides, designing the dataset playes as an important role in training the model. For example: lmdb, leveldb, h5df, etc.
+ 
+ - I will explain more details about how to design a good database for Caffe library in the next post. 

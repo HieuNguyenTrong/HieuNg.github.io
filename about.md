@@ -11,7 +11,7 @@ In 2016, I joined Dongguk University.
 
 ### More Information
 
-I'm is currently a Master student in Multimedia Engineering of Dongguk University. 
+I'm currently a Master student in Multimedia Engineering of Dongguk University. 
 During my Master study, my main research interests are Mobile Application Development, Game AI, Image Processing, Computer Vision and Machine Learning.
 
 ### Contact me

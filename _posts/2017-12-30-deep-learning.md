@@ -33,6 +33,6 @@ Note:
  
  + After experience with Caffe library for training the net, i found out that, to reduce the training time and increase the accuracy of the model, the batch size shoud be increased, however, increasing the batch size depends on the power of GPUs, due to increasing parameters of the net. 
  
- + Besides, designing the dataset playes as an important role in training the model. For example: lmdb, leveldb, h5df, etc.
+ + Besides, designing the dataset plays as an important role in training the model. For example: lmdb, leveldb, h5df, etc.
  
  - I will explain more details about how to design a good database for Caffe library in the next post. 

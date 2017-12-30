@@ -26,4 +26,4 @@ title: Deep Learning Utils
     
 - The depth of the output size: it corresponds to the number of filters   
 Note: 
- + In Caffe library, a batch size of the network which corresponds to the number of filtets. Therefore, choosing a good batch size for training is essential due to the power of GPUs. 
+ + In Caffe library, a batch size of the network which corresponds to the number of filtets. Therefore, choosing a good batch size for training is essential due to the power of GPUs. We will meet a error such as: "out of memory". 

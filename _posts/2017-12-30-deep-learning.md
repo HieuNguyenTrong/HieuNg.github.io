@@ -31,7 +31,7 @@ Note:
 
  + In Caffe library, a batch size of the network which corresponds to the number of filtets. Therefore, choosing a good batch size for training is essential due to the power of GPUs. We will meet a error such as: "out of memory". 
  
- + After experience with Caffe library for training the net, i found out that, to reduce the training time and increase the accuracy of the model, the batch size shoud be increased, however, increasing the batch size depends on the power of GPUs, due to increasing parameters of the net. 
+ + After experience with Caffe library for training the net, i found out that, to reduce the training time and increase the accuracy of the model, the batch size shoud be increased (depends on each problem), however, increasing the batch size depends on the power of GPUs, due to increasing parameters of the net. 
  
  + Besides, designing the dataset plays as an important role in training the model. For example: lmdb, leveldb, h5df, etc.
  

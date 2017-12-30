@@ -24,4 +24,6 @@ title: Deep Learning Utils
 
     + P = ( F - 1 ) /2
     
-- The depth of the output size: it corresponds to the number of filters    
+- The depth of the output size: it corresponds to the number of filters   
+Note: 
+ + In Caffe library, a batch size of the network which corresponds to the number of filtets. Therefore, choosing a good batch size for training is essential due to the power of GPUs. 

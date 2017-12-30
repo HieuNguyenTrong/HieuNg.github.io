@@ -5,6 +5,7 @@ title: Deep Learning Utils
 - How to calculate the output of a convolution layer/ a pooling layer as follows:
 
     + W1 = (W0 - F + 2P) / S + 1
+    
     + Caffe library always does the ceiling operation.
    
 - How to calculate the output of a deconvolution layer as follows:

@@ -16,3 +16,4 @@ title: Deep Learning Utils
 
 - To set the input size and the output size has the same size spatially when S = 1 set zero padding to be 
     P = ( F - 1 ) /2
+- The depth of the output size: it corresponds to the number of filters    

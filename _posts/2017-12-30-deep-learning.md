@@ -8,11 +8,11 @@ title: Deep Learning Utils
 
 - With classification problem, is divided into two catogories: 
 
-   + Linear classification: works with simple data
+- Linear classification: works with simple data
  
  ![alt text](/images/linear_class_01.JPG "Linear classification")
  
-   + Non-linear classification: due to in practice with linearity is not enough for classification. Besides, real-world data requires more sophilicated clasifiers.
+- Non-linear classification: due to in practice with linearity is not enough for classification. Besides, real-world data requires more sophilicated clasifiers.
  
  ![alt text](/images/linear_class_02.JPG "Linear classification")
  

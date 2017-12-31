@@ -2,6 +2,9 @@
 layout: post
 title: Deep Learning Utils
 ---
+
+#### Deep Learning is stacking layers and learning end to end (learning the whole problem from input to output) 
+
 - How to calculate the output of a convolution layer/ a pooling layer as follows:
 
     + W1 = (W0 - F + 2P) / S + 1

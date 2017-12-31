@@ -12,7 +12,7 @@ title: Deep Learning Utils
  
  ![alt text](/images/linear_class_01.JPG "Linear classification")
  
-- Non-linear classification: due to in practice with linearity is not enough for classification. Besides, real-world data requires more sophilicated clasifiers.
+- Non-linear classification: due to in practice with linearity is not enough for classification. Besides, real-world data requires more sophilicated clasifiers such as: ReLU, Sigmoid
  
  ![alt text](/images/linear_class_02.JPG "Linear classification")
  

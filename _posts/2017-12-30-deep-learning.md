@@ -10,17 +10,13 @@ title: Deep Learning Utils
 
  + Linear classification: work with simple data
  
- eg: 
- 
- (/images/step1.gif "Step 1")/images/linear_class_01.JPG
+ ![alt text](/images/linear_class_01.JPG "Linear classification")
  
  + Non-linear classification: due to in practice with linearity is not enough for classification. Besides, real-world data requires more sophilicated clasifiers.
  
-  eg: 
+ ![alt text](/images/linear_class_02.JPG "Linear classification")
  
- (/images/step1.gif "Step 1")/images/linear_class_02.JPG
- 
- (/images/step1.gif "Step 1")/images/non_linear_class.JPG
+ ![alt text](/images/non_linear_class.JPG "Non-linear classification")
 
 - How to calculate the output of a convolution layer/ a pooling layer as follows:
 

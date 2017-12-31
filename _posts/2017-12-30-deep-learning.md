@@ -12,15 +12,15 @@ title: Deep Learning Utils
  
  eg: 
  
- /images/linear_class_01.JPG
+ (/images/step1.gif "Step 1")/images/linear_class_01.JPG
  
  + Non-linear classification: due to in practice with linearity is not enough for classification. Besides, real-world data requires more sophilicated clasifiers.
  
   eg: 
  
- /images/linear_class_02.JPG
+ (/images/step1.gif "Step 1")/images/linear_class_02.JPG
  
- /images/non_linear_class.JPG
+ (/images/step1.gif "Step 1")/images/non_linear_class.JPG
 
 - How to calculate the output of a convolution layer/ a pooling layer as follows:
 

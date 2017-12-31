@@ -6,6 +6,22 @@ title: Deep Learning Utils
 #### Deep Learning is stacking layers and learning end to end (learning the whole problem from input to output) 
 - Networks run layer by layer, composing the input - output transformation of each layer. During learning process, the error is passed back layer by layer to tune the transformations. http://caffe.berkeleyvision.org/
 
+- With classification problem, is divided into two catogories: 
+
+ + Linear classification: work with simple data
+ 
+ eg: 
+ 
+ /images/linear_class_01.jpg
+ 
+ + Non-linear classification: due to in practice with linearity is not enough for classification. Besides, real-world data requires more sophilicated clasifiers.
+ 
+  eg: 
+ 
+ /images/linear_class_02.jpg
+ 
+ /images/non_linear_class.jpg
+
 - How to calculate the output of a convolution layer/ a pooling layer as follows:
 
     + W1 = (W0 - F + 2P) / S + 1

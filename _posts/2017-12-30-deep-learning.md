@@ -6,7 +6,7 @@ title: Deep Learning Utils
 #### Deep Learning is stacking layers and learning end to end (learning the whole problem from input to output) 
 - Networks run layer by layer, composing the input - output transformation of each layer. During learning process, the error is passed back layer by layer to tune the transformations. <http://caffe.berkeleyvision.org/>
 
-- With classification problem, is divided into two catogories: 
+- With classification problem, is divided into two categories: 
 
 - Linear classification: works with simple data
  

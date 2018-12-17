@@ -1,10 +1,10 @@
 How to install Theano, TensorFlow and Keras
 - For Mac users:
     + Open your main terminal or the Anaconda Prompt and enter the following commands:
-    pip install theano
-    pip install tensorflow
-    pip install keras
-    conda update --all
+    1. pip install theano
+    2. pip install tensorflow
+    3. pip install keras
+    4. conda update --all
 - For Windows and Linux users:
     + In Spyder, go to Tools and Open Anaconda Prompt. Then enter the following commands:
     1. Create a new environment with Anaconda and Python 3.5:

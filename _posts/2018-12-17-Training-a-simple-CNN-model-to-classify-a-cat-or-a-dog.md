@@ -1,12 +1,8 @@
 
-"""
-@Descr: Train a simple model for classifying a cat or a dog
-@Created Date: 
-@Modified Date: 2018 Dec 03
-@author: Hieu.NguyenTrong
-"""
+Train a simple model for classifying a cat or a dog
+
 # Building the CNN
-# importing the Keras libraries and packages
+# Importing the Keras libraries and packages
 from keras.models import Sequential
 from keras.layers import Convolution2D
 from keras.layers import MaxPooling2D
@@ -16,33 +12,41 @@ from keras.layers import Dropout
 from matplotlib import pyplot
 from keras.constraints import maxnorm
 
-# initialising the CNN
+# Initialising the CNN
 classifier = Sequential()
 
-# -- Step 1 - First Convolution 
+# First Convolution  
 classifier.add(Convolution2D(filters= 64, kernel_size= 3, 
                              input_shape=(64, 64, 3), kernel_constraint=maxnorm(3),
                              data_format="channels_last",                       
                              activation="relu"))
 # Max Fooling
 classifier.add(MaxPooling2D(pool_size=(2,2)))
+
 # Dropout
 classifier.add(Dropout(0.5))
 
 # Second Convolution
 classifier.add(Convolution2D(filters= 128, kernel_size= 3, kernel_constraint=maxnorm(3),
                              activation="relu"))
+# Max Fooling
 classifier.add(MaxPooling2D(pool_size=(2,2)))
+
+# Dropout
 classifier.add(Dropout(0.5))
 
-
-# -- Step 3 - Flattening
+# Flattening 
 classifier.add(Flatten())
  
-# -- Step 4 - Fully Connected 
+# Fully Connected 
 classifier.add(Dense(128, activation="relu",  kernel_constraint=maxnorm(3)))
+
+# Dropout
 classifier.add(Dropout(0.5))
+
+# Output
 classifier.add(Dense(1, activation="sigmoid"))
+
 classifier.summary()
  # Compiling the CNN
 classifier.compile(optimizer = "adam", loss ="binary_crossentropy", metrics = ['accuracy'])

@@ -14,11 +14,9 @@ giving an image about either a cat or a dog.
 
 #### Overfitting: 
 
-- In theory: 
-*when the model learns from the training data too well, and does poorly when presented with new data.*
+- In theory: *when the model learns from the training data too well, and does poorly when presented with new data.*
 
-- In practice:
-*during training time, when training loss tends to be low, and validation loss tends to be high, therefore it might be overfitting.*
+- In practice: *during training time, when training loss tends to be low, and validation loss tends to be high, therefore it might be overfitting.*
 
 Training Set | Test Set     
 ------------ | -------------

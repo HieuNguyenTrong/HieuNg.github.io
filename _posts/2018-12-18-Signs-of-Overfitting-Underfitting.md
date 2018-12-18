@@ -20,5 +20,7 @@ giving an image about either a cat or a dog.
 - In practice:
 *during training time, when training loss tends to be low, and validation loss tends to be high, therefore it might be overfitting.*
 
-
-
+Training Set | Test Set     
+------------ | -------------
+Training accuracy is **high** | Validation accuracy is **low**
+Training loss is **low** | Validation loss is **high** 

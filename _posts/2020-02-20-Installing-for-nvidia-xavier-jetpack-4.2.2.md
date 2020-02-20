@@ -58,3 +58,5 @@ Created: 2020 Feb 20
   pip uninstall -y enum34
   
   and then reinstall again Scipy.
+  
+  sudo apt install python3-scipy

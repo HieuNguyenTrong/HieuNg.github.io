@@ -45,6 +45,10 @@ Created: 2020 Feb 20
 
 # Install Scipy 
 
+  pip3 install --upgrade setuptools
+  sudo pip3 install -U setuptools
+  sudo apt-get install libpcap-dev libpq-dev
+  sudo pip3 install cython
   pip install scipy
   
 > If it has any errors such as: AttributeError: module 'enum' has no attribute 'IntFlag. Make sure to uninstall enum 

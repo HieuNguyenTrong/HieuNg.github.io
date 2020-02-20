@@ -42,3 +42,15 @@ Created: 2020 Feb 20
   sudo apt-get install -y python-pip python-dev
 > Python 3.5
   sudo apt-get install -y python3-pip python3-dev
+
+# Install Scipy 
+
+  pip install scipy
+  
+> If it has any errors such as: AttributeError: module 'enum' has no attribute 'IntFlag. Make sure to uninstall enum 
+  by:
+  
+  pip freeze | grep enum34
+  pip uninstall -y enum34
+  
+  and then reinstall again Scipy.

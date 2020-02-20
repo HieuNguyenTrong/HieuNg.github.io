@@ -5,7 +5,7 @@ Created: 2020 Feb 20
 
 (link)[https://www.jetbrains.com/pycharm/download/#section=linux]
 
-1. Download any of the two, I would recommend Community edition.
+1. Download Community edition.
 2. Open terminal
 3. cd Downloads
 4. tar -xzf pycharm-community-2018.1.4.tar.gz

@@ -7,7 +7,8 @@ Collecting dataset and annotating/labeling as below:
 
 1. Gathering data by Google Image Search from a chrome extenion callsed Download All Images through a **zip** icon of Google Chrome.
 
-(Google Image Search)[https://chrome.google.com/webstore/detail/download-all-images/ifipmflagepipjokmbdecpmjbibjnakm?hl=en%22]
+(Google Image Search)
+[https://chrome.google.com/webstore/detail/download-all-images/ifipmflagepipjokmbdecpmjbibjnakm?hl=en%22]
 
 
 2. Labeling Data
@@ -27,15 +28,15 @@ Change the annotation format to **YOLO** from **PASCAL VOC** on the left panel b
 
 
 ```
-	[path to image] is the path to an image in the directory containing the downloaded images we are going to label.
+[path to image] is the path to an image in the directory containing the downloaded images we are going to label.
 
-	[classes file] is the file where we list the object classes that we are going to label..
-	
-	For example: 
+[classes file] is the file where we list the object classes that we are going to label..
 
-		labelImg /home/Downloads/drone_images/drone_image_0.jpg classes.txt 
-		
-	With classes.txt has one class: drone
+For example: 
+
+labelImg /home/Downloads/drone_images/drone_image_0.jpg classes.txt 
+
+With classes.txt has one class: drone
 
 ```
 
@@ -60,10 +61,10 @@ Change the annotation format to **YOLO** from **PASCAL VOC** on the left panel b
 *center_x and center_y* represents the center point of the bounding box. But they are normalized to range between 0 and 1 by dividing by the width and height of the image.
 
 ```
-	For example, (0.25,0.75) is the point located at 25% of the width and 75% of the height.
-	We can multiply this number (0.25,0.75) by the original width and height of the image to get the real point. 
-	In fact, we will be doing this at the end after inference to draw the predictions on the image.
-	Generally it is easier for the network to predict values between 0 and 1 than random coordinate values.
+For example, (0.25,0.75) is the point located at 25% of the width and 75% of the height.
+We can multiply this number (0.25,0.75) by the original width and height of the image to get the real point. 
+In fact, we will be doing this at the end after inference to draw the predictions on the image.
+Generally it is easier for the network to predict values between 0 and 1 than random coordinate values.
 ```
 *width and height* represents the width and height of the bounding box. Again normalized to the range 0 to 1 dividing by the original width and height of the image.
 

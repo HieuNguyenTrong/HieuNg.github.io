@@ -22,6 +22,10 @@ Once **labelImg** is successfully installed, launch it by typing.
 
 
 3. After all the images are loaded, we can start labeling the images.
+
+Convert to .JPEG from any type of images.
+> mogrify -format jpg *.JPEG or mogrify -format jpg *.jpeg or mogrify -format jpg *.png 
+
 Change the annotation format to **YOLO** from **PASCAL VOC** on the left panel before proceeding.
 
 > labelImg [path to image] [classes file]

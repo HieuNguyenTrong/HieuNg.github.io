@@ -2,16 +2,15 @@
 **By: Jason Ng**
 
 
-Collecting dataset and annotating/labeling as below:
+# Collecting dataset and annotating/labeling as below:
 
 
-1. Gathering data by Google Image Search from a chrome extenion callsed Download All Images through a **zip** icon of Google Chrome.
+## Gathering data by Google Image Search from a chrome extenion callsed Download All Images through a **zip** icon of Google Chrome.
 
-(Google Image Search)
 [https://chrome.google.com/webstore/detail/download-all-images/ifipmflagepipjokmbdecpmjbibjnakm?hl=en%22]
 
 
-2. Labeling Data
+## Labeling Data
 
 Labeling means drawing bounding boxes around the objects:
 Installing a tool **LabelImg** as below:
@@ -21,7 +20,7 @@ Installing a tool **LabelImg** as below:
 Once **labelImg** is successfully installed, launch it by typing.
 
 
-3. After all the images are loaded, we can start labeling the images.
+## After all the images are loaded, we can start labeling the images.
 
 Convert to .JPEG from any type of images.
 > mogrify -format jpg *.JPEG or mogrify -format jpg *.jpeg or mogrify -format jpg *.png 

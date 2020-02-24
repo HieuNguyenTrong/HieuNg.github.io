@@ -1,32 +1,33 @@
 # Installing Darknet for object detecting
 
-''
+```
 	Created: 2020 Feb 21
 	By: Jason Ng
-''
+```
 
 ## How to download and complile on Linux
 
-## clone darknet 
+## Clone darknet 
 
 1. git clone https://github.com/AlexeyAB/darknet.git
 2. cd darknet
 3. mkdir build-release
 4. cd build-release
 
-## before building, just modify in the Makefile
+## Before building, just modify in the Makefile
 
-''
-	GPU=1 to build with CUDA to accelerate by using GPU 
-	CUDNN=1 to build with cuDNN v5-v7 to accelerate training by using GPU 
-	CUDNN_HALF=1 to build for Tensor Cores 
-	OPENCV=1 to build with OpenCV 4.x/3.x/2.4.x - allows to detect on video files and video streams from network cameras or 	web-cams
-''
+```
+GPU=1 to build with CUDA to accelerate by using GPU 
+CUDNN=1 to build with cuDNN v5-v7 to accelerate training by using GPU 
+CUDNN_HALF=1 to build for Tensor Cores 
+OPENCV=1 to build with OpenCV 4.x/3.x/2.4.x - allows to detect on video files and video streams from network cameras                or web-cams
+```
 
 5. cmake ..
 
 The logs: 
-''
+
+```
 -- The C compiler identification is GNU 7.4.0
 -- The CXX compiler identification is GNU 7.4.0
 -- Check for working C compiler: /usr/bin/cc
@@ -71,24 +72,23 @@ The logs:
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/jason/Documents/darknet/build-release
-
-''
+```
 
 
 6. make -j8
 
 The log:
 
-''
+```
 [100%] Linking CXX executable uselib_track
 [100%] Linking CXX executable uselib
 [100%] Built target uselib
 [100%] Built target uselib_track
+```
 
-''
 7. make install
 
-''
+```
 -- Install configuration: ""
 -- Installing: /home/jason/Documents/darknet/libdark.so
 -- Set runtime path of "/home/jason/Documents/darknet/libdark.so" to ""
@@ -104,8 +104,9 @@ The log:
 -- Installing: /home/jason/Documents/darknet/share/darknet/DarknetTargets-noconfig.cmake
 -- Installing: /home/jason/Documents/darknet/share/darknet/DarknetConfig.cmake
 -- Installing: /home/jason/Documents/darknet/share/darknet/DarknetConfigVersion.cmake
+```
 
-''
+8. Finish
 
 
 

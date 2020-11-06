@@ -1,9 +1,27 @@
+- [Installing NVIDIA driver on Ubuntu 18.04](#installing_nvidia_on_Ubuntu_18_04)
 - [Installing Sublime Text 3](#install_sublime_text_3)
 - [Installing ibus-unikey in Ubuntu 18.04](#install_unikey)
 - [Installing NVIDIA SDK Manager](#nvidia_sdk_manager)
 - [Installing PyCharm](#installing_pycharm)
 - [Installing Opencv from the Source](#installing_opencv)
 - [Installing Python 2.7, 3.6](#installing_python_2_7_3_6)
+
+
+## Installing NVIDIA driver on Ubuntu 18.04
+
+1. Check the model of your NVIDIA GPU
+
+	$ ubuntu-drivers devices
+
+2. Install NVIDIA driver 
+
+	$ sudo ubuntu-drivers autoinstall 
+	or 
+	$ sudo apt install nvidia-440-server
+
+3. Reboot
+
+	$ reboot
 
 ## Installing Sublime Text 3
 

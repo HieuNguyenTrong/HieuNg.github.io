@@ -38,7 +38,7 @@
 	$ sudo snap install pycharm-community --classic
 
 
-## Install Python 2.7, 3.6 
+## Installing Python 2.7, 3.6 
 
 1. Python 2.7
 

@@ -1,4 +1,3 @@
-# Errors on Ubuntu and Solutions
 
 - [Pycharm/Python](#pycharm_python)
 

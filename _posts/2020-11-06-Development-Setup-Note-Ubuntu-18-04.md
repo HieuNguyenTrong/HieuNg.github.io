@@ -93,6 +93,10 @@
 6. Install OpenCV with:
 
     $ sudo make install
+    
+- After that, the result shoud be as below.    
+
+![OpenCV Installing Img](/images/opencv_installing.png "OpenCV Installing Img")
 
 - To verify whether OpenCV has been installed successfully, type the following command and you should see the OpenCV version:
 

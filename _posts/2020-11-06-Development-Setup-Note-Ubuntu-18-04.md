@@ -7,7 +7,7 @@
 - [Installing Opencv from the Source](#installing_opencv)
 - [Installing Python 2.7, 3.6](#installing_python_2_7_3_6)
 
-# Installing Sublime Text 3
+## Installing Sublime Text 3
 
 - Sublime Text 3
 
@@ -16,7 +16,7 @@
 	$ sudo apt-get update
 	$ sudo apt-get install sublime-text
 
-# Installing ibus-unikey in Ubuntu 18.04
+## Installing ibus-unikey in Ubuntu 18.04
 
 - Click *GUIDELINE LINK* to see how to install.
 
@@ -25,20 +25,20 @@
 - To Switch between English and Vietnamese by Pressing “Windows + Space”
 
 
-# Installing NVIDIA SDK Manager
+## Installing NVIDIA SDK Manager
 
  - Click *DOWNLOAD LINK* to see how to install.
 
 	[DOWNLOAD LINK](https://developer.nvidia.com/nvidia-sdk-manager)
 
-# Installing PyCharm
+## Installing PyCharm
 
 - Pycharm-community
 
 	$ sudo snap install pycharm-community --classic
 
 
-# Install Python 2.7, 3.6 
+## Install Python 2.7, 3.6 
 
 1. Python 2.7
 
@@ -57,7 +57,7 @@
 - To check whether it works or not	
 	$ python -V
 
-# Installing OpenCV from the Source
+## Installing OpenCV from the Source
 
 1. Install the required dependencies:
 

@@ -1,5 +1,5 @@
 
--[How to use *reduce*, *lamda*, *map*, *sum*, *filter* function ](#how_to_use_reduce_map_sum_filter_function)
+- [How to use reduce, lamda, map, sum, filter function ](#how_to_use_reduce_map_sum_filter_function)
 
 
 ## How to use *reduce*, *lamda*, *map*, *sum*, *filter* function 

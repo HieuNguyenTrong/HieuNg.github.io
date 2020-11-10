@@ -61,19 +61,24 @@ Download all three .deb: runtime/developer/code sample
 
 ```
 $ sudo dpkg -i libcudnn7_7.6.5.32–1+cuda10.1_amd64.deb (the runtime library),
-
 $ sudo dpkg -i libcudnn7-dev_7.6.5.32–1+cuda10.1_amd64.deb (the developer library), and
-
 $ sudo dpkg -i libcudnn7-doc_7.6.5.32–1+cuda10.1_amd64.deb (the code samples).
 ```
 
 Now we can verify the cuDNN installation (below is just the official guide, which surprisingly works out of the box):
-
+Go to the MNIST example code: 
 ```
-Go to the MNIST example code: cd /usr/src/cudnn_samples_v7/mnistCUDNN/.
-Compile the MNIST example: sudo make clean && sudo make.
-Run the MNIST example: ./mnistCUDNN. If your installation is successful, you should see Test passed! at the end of the output, like this:
+$ cd /usr/src/cudnn_samples_v7/mnistCUDNN/
 ```
+Compile the MNIST example: 
+```
+$ sudo make clean && sudo make
+```
+Run the MNIST example: 
+```
+$ ./mnistCUDNN 
+```
+If your installation is successful, you should see Test passed! at the end of the output, like this:
 
 ## Installing NVIDIA driver on Ubuntu 18.04
 

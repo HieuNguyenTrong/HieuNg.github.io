@@ -1,9 +1,9 @@
 
-- [Pycharm/Python](#pycharm_python_issue)
-- [TensorRT](#tensorrt_issue)
+- [Pycharm/Python Issues](#pycharm_python_issue)
+- [TensorRT Issues](#tensorrt_issue)
 - [CUDA, cuDNN Issues](#cuda_cudnn_issues)
 
-## Pycharm/Python
+## Pycharm/Python Issues
 
 1. Pycharm error
 

@@ -1,5 +1,6 @@
 
 - [Installing CUDA 10 and cuDNN ](#installing_cuda_10_and_cudnn)
+- [Installing CUDA 10.2, CuDNN 7.6.5, TensorRT 7.0 on Ubuntu 18.04](#Installing CUDA 10.2, CuDNN 7.6.5, TensorRT 7.0 on Ubuntu 18.04)
 - [Installing NVIDIA driver on Ubuntu 18.04](#installing_nvidia_on_Ubuntu_18_04)
 - [Installing PyCuda](#installing_pycuda)
 - [Installing Sublime Text 3](#install_sublime_text_3)
@@ -70,9 +71,58 @@ $ sudo dpkg -i libcudnn7-doc_7.6.5.32–1+cuda10.1_amd64.deb (the code samples).
 Now we can verify the cuDNN installation (below is just the official guide, which surprisingly works out of the box):
 
 ```
-  Go to the MNIST example code: cd /usr/src/cudnn_samples_v7/mnistCUDNN/.
-  Compile the MNIST example: sudo make clean && sudo make.
-  Run the MNIST example: ./mnistCUDNN. If your installation is successful, you should see Test passed! at the end of the output, like this:
+Go to the MNIST example code: cd /usr/src/cudnn_samples_v7/mnistCUDNN/.
+Compile the MNIST example: sudo make clean && sudo make.
+Run the MNIST example: ./mnistCUDNN. If your installation is successful, you should see Test passed! at the end of the output, like this:
+```
+
+## Installing CUDA 10.2, CuDNN 7.6.5, TensorRT 7.0 on Ubuntu 18.04
+
+1. Installing CUDA
+
+Install CUDA directly from the offline installer
+
+```
+$ sudo apt update
+$ sudo apt upgrade -y
+$ mkdir installer ; cd installer
+$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
+$ sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
+$ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+$ sudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
+$ sudo apt-get update
+$ sudo apt-get -y install cuda-10-2
+```
+
+2. Installing CuDNN
+
+Download CuDNN [here](https://developer.nvidia.com/rdp/cudnn-archive) (BOTH the runtime and dev, deb). The version 7.6.5.
+
+```
+$ sudo dpkg -i libcudnn7_7.6.5.32-1+cuda10.2_amd64.deb
+$ sudo dpkg -i libcudnn7-dev_7.6.5.32-1+cuda10.2_amd64.deb
+```
+
+3. Installing TensorRT
+
+Download TensorRT [here](https://developer.nvidia.com/nvidia-tensorrt-7x-download). The version 7.0.
+
+```
+$ sudo dpkg -i nv-tensorrt-repo-ubuntu1804-cuda10.2-trt7.0.0.11-ga-20191216_1-1_amd64.deb
+$ sudo apt update
+$ sudo apt install tensorrt libnvinfer7
+```
+
+Add to .bashrc
+
+```
+export CUDA_HOME=/usr/local/cuda
+export DYLD_LIBRARY_PATH=$CUDA_HOME/lib64:$DYLD_LIBRARY_PATH
+export PATH=$CUDA_HOME/bin:$PATH
+export C_INCLUDE_PATH=$CUDA_HOME/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$CUDA_HOME/include:$CPLUS_INCLUDE_PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+export LD_RUN_PATH=$CUDA_HOME/lib64:$LD_RUN_PATH
 ```
 
 ## Installing NVIDIA driver on Ubuntu 18.04

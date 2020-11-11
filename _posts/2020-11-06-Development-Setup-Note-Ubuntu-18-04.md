@@ -94,23 +94,176 @@ $ sudo apt-get update
 $ sudo apt-get -y install cuda-10-2
 ```
 
-2. Installing CuDNN
+2. Installing CuDNN 
+
 
 Download CuDNN [here](https://developer.nvidia.com/rdp/cudnn-archive) (BOTH the runtime and dev, deb). The version 7.6.5.
 
 ```
-$ sudo dpkg -i libcudnn7_7.6.5.32-1+cuda10.2_amd64.deb
-$ sudo dpkg -i libcudnn7-dev_7.6.5.32-1+cuda10.2_amd64.deb
+$ tar -xzvf cudnn-10.2-linux-x64-v7.6.5.32.tgz
+$ sudo cp cuda/include/cudnn*.h /usr/local/cuda/include
+$ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+$ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
+```
+
+To verify that cuDNN is installed and runnning properly:
+
+Go to the writable path
+
+```
+$ cd /usr/src/cudnn_samples_v7/mnistCUDNN
+```
+
+Compile the mnistCUDNN sample
+
+```
+$ sudo make clean
+$ sudo make
+```
+
+The log should be like this:
+
+```
+Linking agains cublasLt = true
+CUDA VERSION: 10020
+TARGET ARCH: x86_64
+HOST_ARCH: x86_64
+TARGET OS: linux
+SMS: 30 35 50 53 60 61 62 70 72 75
+/usr/local/cuda/bin/nvcc -ccbin g++ -I/usr/local/cuda/include -I/usr/local/cuda/include -IFreeImage/include  -m64    -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_53,code=sm_53 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_62,code=sm_62 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_72,code=sm_72 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_75,code=compute_75 -o fp16_dev.o -c fp16_dev.cu
+g++ -I/usr/local/cuda/include -I/usr/local/cuda/include -IFreeImage/include   -o fp16_emu.o -c fp16_emu.cpp
+g++ -I/usr/local/cuda/include -I/usr/local/cuda/include -IFreeImage/include   -o mnistCUDNN.o -c mnistCUDNN.cpp
+/usr/local/cuda/bin/nvcc -ccbin g++   -m64      -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_53,code=sm_53 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_62,code=sm_62 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_72,code=sm_72 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_75,code=compute_75 -o mnistCUDNN fp16_dev.o fp16_emu.o mnistCUDNN.o -I/usr/local/cuda/include -I/usr/local/cuda/include -IFreeImage/include  -L/usr/local/cuda/lib64 -L/usr/local/cuda/lib64 -lcublasLt -LFreeImage/lib/linux/x86_64 -LFreeImage/lib/linux -lcudart -lcublas -lcudnn -lfreeimage -lstdc++ -lm
+```
+
+Run the mnistCUDNN sample.
+
+```
+$ ./mnistCUDNN
+```
+
+If cuDNN is properly installed and running on your Linux system, you will see a message similar to the following:
+```
+Test passed!
 ```
 
 3. Installing TensorRT
 
 Download TensorRT [here](https://developer.nvidia.com/nvidia-tensorrt-7x-download). The version 7.0.
 
+Install the following dependencies, if not already present:
+
 ```
-$ sudo dpkg -i nv-tensorrt-repo-ubuntu1804-cuda10.2-trt7.0.0.11-ga-20191216_1-1_amd64.deb
-$ sudo apt update
-$ sudo apt install tensorrt libnvinfer7
+  CUDA 9.0, 10.0, or 10.2
+  cuDNN 7.6.5
+  Python 2 or Python 3 (Optional)
+```
+
+Download the TensorRT tar file that matches the Linux distribution you are using.
+Choose where you want to install TensorRT. This tar file will install everything into a subdirectory called TensorRT-7.x.x.x.
+
+Unpack the tar file.
+```
+    version=”7.x.x.x”
+    os=”<os>”
+    arch=$(uname -m)
+    cuda=”cuda-x.x”
+    cudnn=”cudnn7.x”
+    tar xzvf TensorRT-${version}.${os}.${arch}-gnu.${cuda}.${cudnn}.tar.gz
+
+    Where:
+        7.x.x.x is your TensorRT version
+        <os> is:
+            Ubuntu-16.04
+            Ubuntu-18.04
+            CentOS-7.6
+        cuda-x.x is CUDA version 9.0, 10.0, or 10.2.
+        cudnn7.x is cuDNN version 7.6.
+    This directory will have sub-directories like lib, include, data, etc…
+```
+
+```
+$ ls TensorRT-${version}
+```
+
+The output should be:
+
+```
+bin  data  doc  graphsurgeon  include  lib  python  samples  targets  TensorRT-Release-Notes.pdf  uff
+```
+
+Add the absolute path to the TensorRTlib directory to the environment variable LD_LIBRARY_PATH:
+
+```
+$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<TensorRT-${version}/lib>
+```
+
+Install the Python TensorRT wheel file.
+
+```
+$ cd TensorRT-${version}/python
+```
+
+If using Python 2.7:
+
+```
+$ sudo pip2 install tensorrt-*-cp27-none-linux_x86_64.whl
+```
+
+If using Python 3.x:
+
+```
+$ sudo pip3 install tensorrt-*-cp3x-none-linux_x86_64.whl
+```
+
+Install the Python UFF wheel file. This is only required if you plan to use TensorRT with TensorFlow.
+
+```
+$ cd TensorRT-${version}/uff
+```
+
+If using Python 2.7:
+
+```
+$ sudo pip2 install uff-0.6.5-py2.py3-none-any.whl
+```
+
+If using Python 3.x:
+
+```
+$ sudo pip3 install uff-0.6.5-py2.py3-none-any.whl
+```
+
+In either case, check the installation with:
+
+```
+which convert-to-uff
+```
+
+Install the Python graphsurgeon wheel file.
+
+```
+$ cd TensorRT-${version}/graphsurgeon
+```
+
+If using Python 2.7:
+
+```
+$ sudo pip2 install graphsurgeon-0.4.1-py2.py3-none-any.whl
+```
+
+If using Python 3.x:
+
+```
+$ sudo pip3 install graphsurgeon-0.4.1-py2.py3-none-any.whl
+```
+
+Verify the installation:
+
+```
+$ cd <TensorRT root directory>/samples/sampleMNIST
+$ make
+$ ./sample_mnist
 ```
 
 Add to .bashrc
@@ -118,14 +271,15 @@ Add to .bashrc
 $ gedit ~/.bashrc
 ```
 
+Make sure CUDA_HOME and CUDNN_INSTALL_DIR are set.
+
 ```
-export CUDA_HOME=/usr/local/cuda
-export DYLD_LIBRARY_PATH=$CUDA_HOME/lib64:$DYLD_LIBRARY_PATH
-export PATH=$CUDA_HOME/bin:$PATH
-export C_INCLUDE_PATH=$CUDA_HOME/include:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=$CUDA_HOME/include:$CPLUS_INCLUDE_PATH
-export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
-export LD_RUN_PATH=$CUDA_HOME/lib64:$LD_RUN_PATH
+export CUDA_HOME=/usr/local/cuda-10.2
+export CUDNN_INSTALL_DIR=/usr/local/cuda-10.2
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64
+
+PATH=${CUDA_HOME}/bin:${PATH}
+export PATH
 ```
 
 ## Installing NVIDIA driver on Ubuntu 18.04

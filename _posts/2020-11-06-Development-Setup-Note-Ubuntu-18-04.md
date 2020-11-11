@@ -1,6 +1,6 @@
 
 - [Installing CUDA 10 and cuDNN ](#installing_cuda_10_and_cudnn)
-- [Installing CUDA 10.2, CuDNN 7.6.5, TensorRT 7.0 on Ubuntu 18.04](#Installing TensorRT)
+- [Installing CUDA 10.2, CuDNN 7.6.5, TensorRT 7.0 on Ubuntu 18.04](#Installing_tensorrt)
 - [Installing NVIDIA driver on Ubuntu 18.04](#installing_nvidia_on_Ubuntu_18_04)
 - [Installing PyCuda](#installing_pycuda)
 - [Installing Sublime Text 3](#install_sublime_text_3)

@@ -1,6 +1,6 @@
 
 - [Installing CUDA 10 and cuDNN ](#installing_cuda_10_and_cudnn)
-- [Installing CUDA 10.2, CuDNN 7.6.5, TensorRT 7.0 on Ubuntu 18.04](#installing_CUDA_10.2)
+- [Installing CUDA 10.2, CuDNN 7.6.5, TensorRT 7.0 on Ubuntu 18.04](#Installing CUDA 10.2, CuDNN 7.6.5, TensorRT 7.0 on Ubuntu 18.04)
 - [Installing NVIDIA driver on Ubuntu 18.04](#installing_nvidia_on_Ubuntu_18_04)
 - [Installing PyCuda](#installing_pycuda)
 - [Installing Sublime Text 3](#install_sublime_text_3)
@@ -114,6 +114,9 @@ $ sudo apt install tensorrt libnvinfer7
 ```
 
 Add to .bashrc
+```
+$ gedit ~/.bashrc
+```
 
 ```
 export CUDA_HOME=/usr/local/cuda
@@ -173,7 +176,7 @@ $ sudo apt install nvidia-cuda-toolkit
 After the package is finished installing, have to configure your PATH and LD_SYSTEM_CONFIG environment variables so that your system can find the appropriate binary executable and library files needed for CUDA.
 
 ```
-$ gedit ~/.bashrc#
+$ gedit ~/.bashrc
 ```
 
 Add the following at the end of the file:

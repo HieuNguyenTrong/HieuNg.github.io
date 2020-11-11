@@ -59,7 +59,6 @@ Restart machine.
 3. Install cuDNN
 
 [Goto page](https://developer.nvidia.com/rdp/cudnn-download)
-
 Download all three .deb: runtime/developer/code sample
 
 ```

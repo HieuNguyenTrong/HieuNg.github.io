@@ -50,6 +50,19 @@ Copyright (c) 2005-2019 NVIDIA Corporation
 Built on Wed_Oct_23_19:24:38_PDT_2019
 Cuda compilation tools, release 10.2, V10.2.89
 ```
+3. h5py issue
+```
+model_config = json.loads(model_config.decode('utf-8'))
+AttributeError: 'str' object has no attribute 'decode'
+```
+
+- Solution: 
+
+h5py should be less than
+
+``` 
+h5py <=3.0.0
+```
 
 ## TensorRT Issues
 

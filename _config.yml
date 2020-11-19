@@ -84,7 +84,7 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-theme: minima
+theme: jekyll-theme-modernist
 
 navbar-col: "#EAEAEA"
 navbar-text-col: "#404040"

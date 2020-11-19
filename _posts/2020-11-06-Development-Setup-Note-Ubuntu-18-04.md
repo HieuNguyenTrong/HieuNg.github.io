@@ -537,3 +537,36 @@ To verify whether OpenCV has been installed successfully, type the following com
 ```
 $ pkg-config --modversion opencv4
 ```
+
+## Install Java JDK
+
+```
+$ java -version
+$ apt install openjdk-8-jre-headless
+$ sudo apt install openjdk-8-jdk
+
+$ sudo nano /etc/environment
+$ JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java"
+
+To apply the changes
+$ source /etc/environment
+
+To rerify JAVAHOME
+$ echo $JAVA_HOME
+
+Output
+/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+
+```
+
+## Install Visual Code
+
+```
+$ sudo apt update
+$ sudo apt install software-properties-common apt-transport-https wget
+$ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+$ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+$ sudo apt update
+$ sudo apt install code
+
+```

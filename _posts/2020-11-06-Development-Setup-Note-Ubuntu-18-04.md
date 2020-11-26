@@ -558,7 +558,6 @@ Output
 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 ```
-
 ## Install Visual Code
 
 ```
@@ -569,4 +568,14 @@ $ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos
 $ sudo apt update
 $ sudo apt install code
 
+```
+
+
+## Install Google Earth
+
+```
+$ sudo apt install gdebi-core wget
+$ wget https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
+$ ls google-earth-pro-stable_current_amd64.deb 
+$ sudo gdebi google-earth-pro-stable_current_amd64.deb
 ```
